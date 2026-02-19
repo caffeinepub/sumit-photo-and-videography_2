@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        
+        /* Enhanced Wedding Photography Theme - Light Mode */
+        --background: 0.98 0.015 35;
+        --foreground: 0.22 0.025 30;
+        --card: 1 0 0;
+        --card-foreground: 0.22 0.025 30;
+        --popover: 1 0 0;
+        --popover-foreground: 0.22 0.025 30;
+        --primary: 0.58 0.14 18;
+        --primary-foreground: 0.98 0.015 35;
+        --secondary: 0.93 0.035 48;
+        --secondary-foreground: 0.32 0.025 30;
+        --muted: 0.96 0.025 42;
+        --muted-foreground: 0.52 0.025 32;
+        --accent: 0.89 0.055 38;
+        --accent-foreground: 0.32 0.025 30;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.98 0.015 35;
+        --border: 0.91 0.025 42;
+        --input: 0.91 0.025 42;
+        --ring: 0.58 0.14 18;
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+        --sidebar: 0.98 0.015 35;
+        --sidebar-foreground: 0.22 0.025 30;
+        --sidebar-primary: 0.58 0.14 18;
+        --sidebar-primary-foreground: 0.98 0.015 35;
+        --sidebar-accent: 0.96 0.025 42;
+        --sidebar-accent-foreground: 0.32 0.025 30;
+        --sidebar-border: 0.91 0.025 42;
+        --sidebar-ring: 0.58 0.14 18;
+        
+        /* Custom wedding theme colors - Enhanced */
+        --rose-gold: 0.58 0.14 18;
+        --champagne: 0.93 0.035 48;
+        --ivory: 0.98 0.015 35;
+    }
+
+    .dark {
+        /* Enhanced Dark Mode with Romantic Wedding Tones */
+        --background: 0.19 0.025 32;
+        --foreground: 0.96 0.015 35;
+        --card: 0.23 0.025 32;
+        --card-foreground: 0.96 0.015 35;
+        --popover: 0.23 0.025 32;
+        --popover-foreground: 0.96 0.015 35;
+        --primary: 0.67 0.16 18;
+        --primary-foreground: 0.19 0.025 32;
+        --secondary: 0.32 0.035 32;
+        --secondary-foreground: 0.96 0.015 35;
+        --muted: 0.29 0.025 32;
+        --muted-foreground: 0.72 0.025 35;
+        --accent: 0.42 0.055 38;
+        --accent-foreground: 0.96 0.015 35;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.19 0.025 32;
+        --border: 0.31 0.025 32;
+        --input: 0.31 0.025 32;
+        --ring: 0.67 0.16 18;
+        --chart-1: 0.488 0.243 264.376;
+        --chart-2: 0.696 0.17 162.48;
+        --chart-3: 0.769 0.188 70.08;
+        --chart-4: 0.627 0.265 303.9;
+        --chart-5: 0.645 0.246 16.439;
+        --sidebar: 0.23 0.025 32;
+        --sidebar-foreground: 0.96 0.015 35;
+        --sidebar-primary: 0.67 0.16 18;
+        --sidebar-primary-foreground: 0.19 0.025 32;
+        --sidebar-accent: 0.32 0.035 32;
+        --sidebar-accent-foreground: 0.96 0.015 35;
+        --sidebar-border: 0.31 0.025 32;
+        --sidebar-ring: 0.67 0.16 18;
+        
+        --rose-gold: 0.67 0.16 18;
+        --champagne: 0.84 0.05 48;
+        --ivory: 0.96 0.015 35;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer utilities {
+    .text-rose-gold {
+        color: oklch(var(--rose-gold));
+    }
+    
+    .bg-rose-gold {
+        background-color: oklch(var(--rose-gold));
+    }
+    
+    .border-rose-gold {
+        border-color: oklch(var(--rose-gold));
+    }
+    
+    .text-champagne {
+        color: oklch(var(--champagne));
+    }
+    
+    .bg-champagne {
+        background-color: oklch(var(--champagne));
+    }
+}

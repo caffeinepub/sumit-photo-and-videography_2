@@ -1,0 +1,84 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-19T13:14:12.484Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 5,
+    "implemented": 4,
+    "items": [
+      {
+        "id": "REQ-26",
+        "summary": "Create backend admin list system in main.mo that stores and manages admin principals with Internet Identity authentication, including methods to add admins, check if a principal is an admin, and initialize with the first authenticated user as admin",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-27",
+        "summary": "Create unified admin dashboard page component at frontend/src/pages/admin/AdminDashboardPage.tsx with organized navigation menu that provides links to all existing admin features: Order Management, Content Management (Videos/Photos/Date Galleries), Package Management, Homepage Content, Category Management, and Sitewide Content",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/admin/AdminDashboardPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/admin/AdminDashboardPage.tsx"
+        ]
+      },
+      {
+        "id": "REQ-28",
+        "summary": "Update App.tsx routing configuration to add the unified admin dashboard as the main admin route at /admin, with the dashboard serving as the landing page for authenticated admins and providing navigation to all sub-admin pages",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-29",
+        "summary": "Update AdminGuard component to use the new backend admin check method, verifying that authenticated users are in the admin list before granting access to admin routes, and showing appropriate access denied messages for non-admin authenticated users",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/components/AdminGuard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/AdminGuard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-30",
+        "summary": "Update Layout component header navigation to show an 'Admin Dashboard' link when the current user is verified as an admin, providing quick access to the unified admin dashboard from any page",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Layout.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Layout.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.ts",
+    "frontend/src/components/AdminGuard.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/pages/admin/AdminDashboardPage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

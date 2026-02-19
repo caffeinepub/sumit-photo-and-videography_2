@@ -1,0 +1,81 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Create unified admin dashboard with navigation and consolidated admin features",
+  "requirements": [
+    {
+      "id": "REQ-27",
+      "summary": "Create unified admin dashboard page component with organized navigation menu linking to all existing admin features",
+      "acceptanceCriteria": [
+        "AdminDashboardPage component exists with clear section organization",
+        "Navigation menu displays all admin feature sections with descriptive labels",
+        "Clicking navigation items routes to existing admin pages",
+        "Dashboard layout is clean and organized using the existing wedding photography theme",
+        "All existing admin pages remain functional and accessible from the dashboard"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/admin/AdminDashboardPage.tsx",
+          "operation": "create",
+          "description": "Create a new AdminDashboardPage component that serves as the unified admin dashboard landing page. Display a welcome header with the current admin's name (from user profile). Organize navigation into logical sections: Order Management (link to /admin/orders), Content Management (Videos/Photos at /admin/content, Date Galleries at /admin/special-moments), Package Management (link to /admin/packages), Site Content (Homepage at /admin/homepage, Categories at /admin/categories, Sitewide at /admin/sitewide). Use the existing wedding photography theme (rose-gold, champagne, ivory tones) with shadcn/ui Card components for each section. Each card should have an icon, title, description, and navigation button. Maintain responsive grid layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-28",
+      "summary": "Update App.tsx routing to add unified admin dashboard as main admin route and ensure all sub-routes remain accessible",
+      "acceptanceCriteria": [
+        "/admin route displays the new AdminDashboardPage",
+        "All existing admin routes remain accessible as sub-routes or through dashboard navigation",
+        "AdminGuard protection applies to the dashboard and all admin sub-routes",
+        "Navigation from dashboard to admin sub-pages works correctly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a new route at /admin that renders the AdminDashboardPage component wrapped with AdminGuard. Ensure all existing admin routes (/admin/orders, /admin/content, /admin/packages, /admin/special-moments, /admin/homepage, /admin/categories, /admin/sitewide) remain in the router configuration and continue to use AdminGuard. Import AdminDashboardPage from 'frontend/src/pages/admin/AdminDashboardPage'."
+        }
+      ]
+    },
+    {
+      "id": "REQ-29",
+      "summary": "Update AdminGuard to verify admin status using backend admin check method and show access denied for non-admin users",
+      "acceptanceCriteria": [
+        "AdminGuard calls backend method to verify admin status",
+        "Non-admin authenticated users see access denied message",
+        "Admin users can access all admin routes without restrictions",
+        "Loading state displays while admin status is being verified"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add a new React Query hook useIsCallerAdmin that calls actor.isCallerAdmin() to check if the authenticated user is an admin. Configure the query with queryKey: ['isAdmin'], enable only when actor is available, and set staleTime appropriately. Return the query result including isLoading and data states."
+        },
+        {
+          "path": "frontend/src/components/AdminGuard.tsx",
+          "operation": "modify",
+          "description": "Update AdminGuard to use the new useIsCallerAdmin hook from useQueries. Replace the current placeholder admin check with the backend verification. Show a loading state while isLoading is true. If the user is authenticated but isCallerAdmin returns false, display an access denied message with appropriate styling matching the wedding photography theme. If isCallerAdmin returns true, render children normally. Keep the existing redirect logic for non-authenticated users."
+        }
+      ]
+    },
+    {
+      "id": "REQ-30",
+      "summary": "Update Layout header navigation to show Admin Dashboard link for verified admin users",
+      "acceptanceCriteria": [
+        "Admin Dashboard link appears in header navigation for admin users",
+        "Link routes to /admin (the unified dashboard)",
+        "Link is hidden for non-admin users",
+        "Link styling matches existing navigation theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Import and use the useIsCallerAdmin hook from useQueries. In the header navigation section (both desktop and mobile menus), conditionally render an 'Admin Dashboard' link that routes to /admin when useIsCallerAdmin returns true. Style the link consistently with existing navigation links using the wedding photography theme. Position the Admin Dashboard link logically in the navigation menu (suggest placing it after authenticated user indicators or at the end of main navigation). Ensure the link is hidden when isCallerAdmin is false or loading."
+        }
+      ]
+    }
+  ]
+}

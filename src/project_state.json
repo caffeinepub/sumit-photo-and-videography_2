@@ -1,0 +1,363 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Photography and videography website for 'Sumit Photo and Videography' with cinematic wedding theme, including public galleries (Videos & Special Moments), customer booking system with package selection, and admin panel for managing orders, content, and packages",
+  "architectural_notes": [
+    "Cinematic wedding theme with clean, elegant design aesthetic",
+    "Public-facing site requires no authentication for browsing and booking",
+    "Admin panel protected by Internet Identity authentication",
+    "Content organization system with categories (Weddings, Pre-wedding, Receptions)",
+    "Featured content system for homepage highlights",
+    "Date-based organization system for Special Moments galleries in addition to category-based organization",
+    "Universal admin editing capabilities for all site content including homepage, packages, and galleries",
+    "Centralized admin dashboard with unified navigation for all management features",
+    "Backend admin principal registry for access control",
+    "Role-based access with full admin privileges for all authenticated admins"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-cinematic-wedding-themed-homepage-with-hero-section-showcasing-featured-photography-and-videography-work",
+      "title": "Create a cinematic wedding-themed homepage with hero section showcasing featured photography and videography work",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-videos-gallery-page-that-displays-videography-portfolio-with-category-organization-weddings-pre-wedding-receptions",
+      "title": "Implement Videos gallery page that displays videography portfolio with category organization (Weddings, Pre-wedding, Receptions)",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-special-moments-gallery-page-that-displays-photography-portfolio-with-category-organization-weddings-pre-wedding-receptions",
+      "title": "Implement Special Moments gallery page that displays photography portfolio with category organization (Weddings, Pre-wedding, Receptions)",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-orders-booking-section-where-customers-can-browse-photography-packages-and-submit-booking-requests-with-package-selection-and-date",
+      "title": "Create Orders/Booking section where customers can browse photography packages and submit booking requests with package selection and date",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-admin-panel-order-management-with-ability-to-view-all-booking-requests-approve-reject-bookings-update-booking-status-pending-confirmed-completed-and-assign-photographers-to-bookings",
+      "title": "Implement admin panel order management with ability to view all booking requests, approve/reject bookings, update booking status (pending/confirmed/completed), and assign photographers to bookings",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-admin-panel-content-management-for-uploading-and-organizing-videos-and-photos-with-category-assignment-weddings-pre-wedding-receptions-and-featured-content-control",
+      "title": "Implement admin panel content management for uploading and organizing videos and photos with category assignment (Weddings, Pre-wedding, Receptions) and featured content control",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-admin-panel-package-management-for-creating-and-editing-photography-videography-packages-with-names-descriptions-and-prices",
+      "title": "Implement admin panel package management for creating and editing photography/videography packages with names, descriptions, and prices",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-internet-identity-authentication-to-secure-admin-panel-access-while-keeping-public-pages-accessible-without-login",
+      "title": "Implement Internet Identity authentication to secure admin panel access while keeping public pages accessible without login",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-cohesive-cinematic-wedding-photography-visual-theme-with-elegant-typography-soft-romantic-colors-rose-gold-champagne-ivory-tones-and-sophisticated-layout-patterns-throughout-the-entire-application",
+      "title": "Apply a cohesive cinematic wedding photography visual theme with elegant typography, soft romantic colors (rose gold, champagne, ivory tones), and sophisticated layout patterns throughout the entire application",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-hero-section-background-image-to-feature-a-wedding-photography-themed-visual-that-emphasizes-the-cinematic-wedding-aesthetic",
+      "title": "Update the hero section background image to feature a wedding photography themed visual that emphasizes the cinematic wedding aesthetic",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-refresh-the-color-palette-throughout-the-application-to-enhance-the-wedding-photography-aesthetic-while-maintaining-the-existing-rose-gold-champagne-and-ivory-tones-foundation",
+      "title": "Refresh the color palette throughout the application to enhance the wedding photography aesthetic while maintaining the existing rose gold, champagne, and ivory tones foundation",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-wedding-and-photography-themed-background-imagery-to-key-sections-throughout-the-site-including-the-homepage-services-section-and-gallery-pages",
+      "title": "Add wedding and photography themed background imagery to key sections throughout the site including the homepage services section and gallery pages",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-all-generated-wedding-photography-themed-images-as-static-assets-in-frontend-public-assets-generated-directory",
+      "title": "Render all generated wedding photography themed images as static assets in frontend/public/assets/generated directory",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-admin-interface-for-managing-date-organized-special-moments-galleries-with-form-to-create-new-galleries-by-date-input-fields-for-title-and-description-ability-to-upload-multiple-photos-to-each-gallery-and-list-view-of-all-existing-date-organized-galleries-with-edit-and-delete-actions",
+      "title": "Create admin interface for managing date-organized Special Moments galleries with form to create new galleries by date, input fields for title and description, ability to upload multiple photos to each gallery, and list view of all existing date-organized galleries with edit and delete actions",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-special-moments-public-gallery-page-to-display-both-category-organized-photos-and-date-organized-galleries-with-filter-toggle-between-by-category-and-by-date-views-showing-date-organized-galleries-as-clickable-cards-that-open-full-gallery-views",
+      "title": "Update Special Moments public gallery page to display both category-organized photos and date-organized galleries with filter toggle between 'By Category' and 'By Date' views, showing date-organized galleries as clickable cards that open full gallery views",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-admin-interface-for-editing-homepage-hero-section-content-with-form-fields-for-title-subtitle-call-to-action-button-text-and-image-upload-for-hero-background-with-live-preview",
+      "title": "Create admin interface for editing homepage hero section content with form fields for title, subtitle, call-to-action button text, and image upload for hero background with live preview",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-homepage-component-to-fetch-and-display-dynamic-hero-section-content-from-backend-instead-of-using-hardcoded-values",
+      "title": "Update HomePage component to fetch and display dynamic hero section content from backend instead of using hardcoded values",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-existing-package-management-system-to-allow-editing-all-package-fields-including-name-description-price-and-type-through-the-admin-panel-packageform-component",
+      "title": "Enhance existing package management system to allow editing all package fields including name, description, price, and type through the admin panel PackageForm component",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-admin-interface-for-managing-gallery-categories-with-form-to-edit-category-display-names-and-descriptions-for-weddings-pre-wedding-and-receptions-categories",
+      "title": "Create admin interface for managing gallery categories with form to edit category display names and descriptions for Weddings, Pre-Wedding, and Receptions categories",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-admin-interface-for-editing-site-wide-text-content-with-dedicated-form-sections-for-services-descriptions-photography-and-videography-booking-page-introduction-text-and-footer-content",
+      "title": "Create admin interface for editing site-wide text content with dedicated form sections for services descriptions (photography and videography), booking page introduction text, and footer content",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-homepage-services-section-and-bookingpage-to-fetch-and-display-dynamic-text-content-from-backend-instead-of-using-hardcoded-descriptions",
+      "title": "Update HomePage services section and BookingPage to fetch and display dynamic text content from backend instead of using hardcoded descriptions",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-unified-admin-dashboard-page-component-at-frontend-src-pages-admin-admindashboardpage-tsx-with-organized-navigation-menu-that-provides-links-to-all-existing-admin-features-order-management-content-management-videos-photos-date-galleries-package-management-homepage-content-category-management-and-sitewide-content",
+      "title": "Create unified admin dashboard page component at frontend/src/pages/admin/AdminDashboardPage.tsx with organized navigation menu that provides links to all existing admin features: Order Management, Content Management (Videos/Photos/Date Galleries), Package Management, Homepage Content, Category Management, and Sitewide Content",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-app-tsx-routing-configuration-to-add-the-unified-admin-dashboard-as-the-main-admin-route-at-admin-with-the-dashboard-serving-as-the-landing-page-for-authenticated-admins-and-providing-navigation-to-all-sub-admin-pages",
+      "title": "Update App.tsx routing configuration to add the unified admin dashboard as the main admin route at /admin, with the dashboard serving as the landing page for authenticated admins and providing navigation to all sub-admin pages",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-adminguard-component-to-use-the-new-backend-admin-check-method-verifying-that-authenticated-users-are-in-the-admin-list-before-granting-access-to-admin-routes-and-showing-appropriate-access-denied-messages-for-non-admin-authenticated-users",
+      "title": "Update AdminGuard component to use the new backend admin check method, verifying that authenticated users are in the admin list before granting access to admin routes, and showing appropriate access denied messages for non-admin authenticated users",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-layout-component-header-navigation-to-show-an-admin-dashboard-link-when-the-current-user-is-verified-as-an-admin-providing-quick-access-to-the-unified-admin-dashboard-from-any-page",
+      "title": "Update Layout component header navigation to show an 'Admin Dashboard' link when the current user is verified as an admin, providing quick access to the unified admin dashboard from any page",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Public homepage with hero section and featured work showcase",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Videos gallery for showcasing videography portfolio with category organization",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Special Moments gallery for photography work with category organization",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Orders/Booking section where customers can browse packages and submit booking requests",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Admin panel for order management (view, approve/reject, update status, assign photographers)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Admin content management for uploading and organizing videos/photos with categories and featured content control",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Admin package management for creating and editing photography/videography packages with pricing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Internet Identity authentication for admin access",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Date-organized Special Moments galleries with custom date-based photo collections",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Admin capability to edit homepage hero images and text content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Admin capability to edit package descriptions and pricing",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Admin capability to manage and edit all gallery categories",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Admin capability to update all text content across the entire site",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Create backend data model and API methods for date-organized Special Moments galleries that store custom date-based photo collections with fields for date, title (e.g., 'December 25, 2024 - Smith Wedding'), description, and associated photo IDs",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Create backend data model and API methods for editable homepage content including hero section title, subtitle, call-to-action button text, and hero background image URL with admin-only update capabilities",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Create backend API methods for managing gallery category names and descriptions with ability to rename and update descriptions for the three existing categories (Weddings, Pre-Wedding, Receptions)",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Create backend data model and API methods for editable site-wide text content including services section descriptions, booking page introduction text, and footer content with admin-only update capabilities",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Create backend admin list system to store and manage admin principals with Internet Identity authentication",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Build unified admin dashboard with organized navigation menu consolidating all existing admin features (orders, content, packages, site content) into single interface",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Implement admin-only access control with protected routes requiring Internet Identity authentication while keeping public pages accessible",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-29",
+      "summary": "Create backend admin list system in main.mo that stores and manages admin principals with Internet Identity authentication, including methods to add admins, check if a principal is an admin, and initialize with the first authenticated user as admin",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Sumit Photo and Videography",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

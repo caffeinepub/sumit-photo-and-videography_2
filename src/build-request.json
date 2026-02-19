@@ -1,0 +1,131 @@
+{
+  "kind": "build_request",
+  "title": "Create unified admin dashboard with navigation and consolidated admin features",
+  "projectName": "Sumit Photo Videography",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-26",
+      "text": "Create backend admin list system in main.mo that stores and manages admin principals with Internet Identity authentication, including methods to add admins, check if a principal is an admin, and initialize with the first authenticated user as admin",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Admin identification: I'll create a backend admin list where your Internet Identity principal is stored as an admin",
+          "Your principal will be automatically registered as the first admin"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend maintains a stable data structure storing admin principals",
+        "Method exists to check if a given principal is an admin",
+        "Method exists to add new admin principals",
+        "First authenticated principal is automatically registered as admin",
+        "Admin list persists across canister upgrades"
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "text": "Create unified admin dashboard page component at frontend/src/pages/admin/AdminDashboardPage.tsx with organized navigation menu that provides links to all existing admin features: Order Management, Content Management (Videos/Photos/Date Galleries), Package Management, Homepage Content, Category Management, and Sitewide Content",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Unified admin dashboard: I'll consolidate all existing admin features (orders, content management, packages, galleries, hero editing, text editing) into a single, organized admin dashboard with a navigation menu",
+          "Clean navigation menu with organized sections"
+        ]
+      },
+      "acceptanceCriteria": [
+        "AdminDashboardPage component exists with clear section organization",
+        "Navigation menu displays all admin feature sections with descriptive labels",
+        "Clicking navigation items routes to existing admin pages",
+        "Dashboard layout is clean and organized using the existing wedding photography theme",
+        "All existing admin pages remain functional and accessible from the dashboard"
+      ]
+    },
+    {
+      "id": "REQ-28",
+      "text": "Update App.tsx routing configuration to add the unified admin dashboard as the main admin route at /admin, with the dashboard serving as the landing page for authenticated admins and providing navigation to all sub-admin pages",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Build unified admin dashboard with organized navigation menu consolidating all existing admin features"
+        ]
+      },
+      "acceptanceCriteria": [
+        "/admin route displays the new AdminDashboardPage",
+        "All existing admin routes remain accessible as sub-routes or through dashboard navigation",
+        "AdminGuard protection applies to the dashboard and all admin sub-routes",
+        "Navigation from dashboard to admin sub-pages works correctly"
+      ]
+    },
+    {
+      "id": "REQ-29",
+      "text": "Update AdminGuard component to use the new backend admin check method, verifying that authenticated users are in the admin list before granting access to admin routes, and showing appropriate access denied messages for non-admin authenticated users",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Access control: All admins will have full access to everything",
+          "Protected routes requiring Internet Identity authentication"
+        ]
+      },
+      "acceptanceCriteria": [
+        "AdminGuard calls backend method to verify admin status",
+        "Non-admin authenticated users see access denied message",
+        "Admin users can access all admin routes without restrictions",
+        "Loading state displays while admin status is being verified"
+      ]
+    },
+    {
+      "id": "REQ-30",
+      "text": "Update Layout component header navigation to show an 'Admin Dashboard' link when the current user is verified as an admin, providing quick access to the unified admin dashboard from any page",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-5"
+        ],
+        "quotes": [
+          "Unified admin dashboard with organized navigation menu",
+          "conditional admin menu access"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin Dashboard link appears in header navigation for admin users",
+        "Link routes to /admin (the unified dashboard)",
+        "Link is hidden for non-admin users",
+        "Link styling matches existing navigation theme"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify frontend/src/hooks/useInternetIdentity.ts or frontend/src/hooks/useInternetIdentity.tsx",
+    "Do not modify frontend/src/hooks/useActor.ts",
+    "Do not modify frontend/src/main.tsx",
+    "Do not modify components in frontend/src/components/ui directory",
+    "Maintain single-actor architecture in backend with all logic in main.mo",
+    "Keep all existing admin pages functional and accessible",
+    "Preserve existing Internet Identity authentication flow",
+    "Maintain existing wedding photography visual theme (rose gold, champagne, ivory tones)"
+  ],
+  "nonGoals": [
+    "Creating different admin role levels or permissions",
+    "Removing or replacing existing admin pages",
+    "Changing the underlying technology stack",
+    "Modifying public pages or their accessibility",
+    "Adding new admin features beyond the dashboard navigation",
+    "Changing the authentication provider from Internet Identity"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

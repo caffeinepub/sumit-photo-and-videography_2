@@ -1,0 +1,85 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-unified-admin-dashboard-page-component-at-frontend-src-pages-admin-admindashboardpage-tsx-with-organized-navigation-menu-that-provides-links-to-all-existing-admin-features-order-management-content-management-videos-photos-date-galleries-package-management-homepage-content-category-management-and-sitewide-content",
+      "featureTitle": "Create unified admin dashboard page component at frontend/src/pages/admin/AdminDashboardPage.tsx with organized navigation menu that provides links to all existing admin features: Order Management, Content Management (Videos/Photos/Date Galleries), Package Management, Homepage Content, Category Management, and Sitewide Content",
+      "files": [
+        "frontend/src/pages/admin/AdminDashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-27"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-app-tsx-routing-configuration-to-add-the-unified-admin-dashboard-as-the-main-admin-route-at-admin-with-the-dashboard-serving-as-the-landing-page-for-authenticated-admins-and-providing-navigation-to-all-sub-admin-pages",
+      "featureTitle": "Update App.tsx routing configuration to add the unified admin dashboard as the main admin route at /admin, with the dashboard serving as the landing page for authenticated admins and providing navigation to all sub-admin pages",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-28"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-adminguard-component-to-use-the-new-backend-admin-check-method-verifying-that-authenticated-users-are-in-the-admin-list-before-granting-access-to-admin-routes-and-showing-appropriate-access-denied-messages-for-non-admin-authenticated-users",
+      "featureTitle": "Update AdminGuard component to use the new backend admin check method, verifying that authenticated users are in the admin list before granting access to admin routes, and showing appropriate access denied messages for non-admin authenticated users",
+      "files": [
+        "frontend/src/components/AdminGuard.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-29"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-layout-component-header-navigation-to-show-an-admin-dashboard-link-when-the-current-user-is-verified-as-an-admin-providing-quick-access-to-the-unified-admin-dashboard-from-any-page",
+      "featureTitle": "Update Layout component header navigation to show an 'Admin Dashboard' link when the current user is verified as an admin, providing quick access to the unified admin dashboard from any page",
+      "files": [
+        "frontend/src/components/Layout.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-30"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
